@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void login_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Login.aspx");
+    }
+
+    protected void newlogin_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("New Login.aspx");
+    }
+
+    protected void courses_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Courses offered.aspx");
+    }
+
+    protected void register_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Register.aspx");
+    }
+
+    protected void myclasses_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("My classes.aspx");
+    }
+</script>
+
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .background {
+            background-image: url('image.PNG');
+            background-size: 1170px 670px;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: 50% top;
+            height: 471px;
+        }
+
+        #form1 {
+            margin-bottom: 558px;
+            height: 651px;
+        }
+
+        .wrapper {
+            border-style: solid;
+            border-color: inherit;
+            border-width: medium;
+            display: inline-block;
+            margin-left: 29px;
+            margin-top: 0px;
+            border-radius: 25px;
+            margin-right: 35px;
+            background-color: lemonchiffon;
+            width: 148px;
+            height: 210px;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 15px;
+            background-color: mediumturquoise;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            margin-left: 17px;
+            padding: 5px;
+            font-family: Arial;
+            text-align: center;
+            margin-right: 0px;
+        }
+
+        .textbox {
+            background-color: lemonchiffon;
+            border-radius: 15px;
+            font-style: italic;
+            font-size: x-large;
+            font-family: 'Segoe UI';
+            color: blueviolet;
+            font-weight: 600;
+        }
+
+        .contentpage {
+            color: coral;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="background">
+    <form id="form1" runat="server">
+        <div>
+            <asp:TextBox ID="TextBox1" runat="server" Height="35px" Text="Welcome to University Of Washington" Style="margin-left: 339px; margin-right: 15px; margin-top: 47px; margin-bottom: 0px"
+                Width="425px" CssClass="textbox" ReadOnly="true"></asp:TextBox>
+        </div>
+        <div style="margin-right: 150px; height: 35px; width: 1352px; margin-left: 220px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <div class="wrapper">
+
+
+            <asp:Button ID="newlogin" runat="server" Text="New Login" CssClass="button" Height="29px" Width="110px" OnClick="newlogin_Click" /><br />
+            <asp:Button ID="login" runat="server" Text="Login" CssClass="button" Height="29px" Width="110px" OnClick="login_Click" /><br />
+            <asp:Button ID="courses" runat="server" Text="Courses offered" CssClass="button" Height="29px" Width="110px" OnClick="courses_Click" /><br />
+            <asp:Button ID="register" runat="server" Text="Register" CssClass="button" Height="29px" Width="110px" OnClick="register_Click" />
+            <asp:Button ID="myclasses" runat="server" Text="My classes" CssClass="button" Height="29px" Width="110px" OnClick="myclasses_Click" />
+
+        </div>
+
+
+
+
+
+    </form>
+</body>
+</html>
